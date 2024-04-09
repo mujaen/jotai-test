@@ -1,11 +1,15 @@
-import { useAtomValue } from 'jotai'
+import React from 'react'
+import { useAtomValue, atom } from 'jotai'
 
 function Frame() {
-  const time = useAtomValue(time)
+  const timeAtom = atom(0)
+  const time = useAtomValue(timeAtom)
 
   return (
     <div className="App">
-      <h1>{time}</h1>
+      <h1>{time}tiems </h1>
     </div>
   )
 }
+
+export default Frame
